@@ -13,7 +13,15 @@ const msg = ref("Hello World")
 
 
   <h5 v-show="false">v show text</h5>
+
+ <span v-for="item in 10">
+  <h1 v-if="item%2==0"> {{ item  }}</h1>
+ </span>
+ 
+
 </template>
+
+
 
 <style scoped>
 
