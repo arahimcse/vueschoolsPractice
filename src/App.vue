@@ -10,6 +10,9 @@ const msg = ref("Hello World")
   <input v-model="msg">
 
   <ListRendering/>
+
+
+  <h5 v-show="false">v show text</h5>
 </template>
 
 <style scoped>
