@@ -1,10 +1,19 @@
 <script setup>
-const ifBoolean = true
-const title = 'title'
+import { reactive } from "vue";
+
+const myObject = reactive({
+  title: 'How to do lists in Vue',
+  author: 'Jane Doe',
+  publishedAt: '2016-04-10'
+})
 </script>
 
-<template v-if="ifBoolean">
-    <h1>{{ title }}</h1>
-    <p >paragraph 1</p>
-    <p>paragraph 2</p>
+<template>
+    <ul>
+  <li v-for="value in myObject">
+    {{ value }}
+  </li>
+</ul>
 </template>
+
+
