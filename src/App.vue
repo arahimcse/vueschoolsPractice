@@ -1,11 +1,15 @@
 <script setup>
-import EventHandler from './components/eventHandler.vue';
+import inlineHandler from './components/inlineHandler.vue'
+import methodHandler from './components/methodHandler.vue'
 
 
 </script>
 
 <template>
-<EventHandler/>
+<inlineHandler/>
+
+<methodHandler/>
+
 </template>
 
 <style scoped>
