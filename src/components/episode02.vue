@@ -23,7 +23,7 @@ const changelocation =(newLocation) => location.name = newLocation
   </div>
   <div class="container mt-5">
     <div class="row">
-        <p >Current Location <strong>{{ location.name }}</strong></p>
+        <p  >Current Location <strong>{{ location.name }}</strong></p>
     </div>
   </div>
 </template>
