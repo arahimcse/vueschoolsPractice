@@ -26,7 +26,7 @@ const accordionIndex = ref(0)
                   <h3 :class="0 == accordionIndex?'text-orange-700':''">What is term?</h3>
                 </div>
                 <!-- Content -->
-                <div class="px-5 pt-0 text-left pb-5" v-show="0 == accordionIndex">
+                <div class="px-5 pt-0 text-left pb-5" v-show="accordionIndex">
                   <p class="leading-6 font-light pl-9 ">
                     Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi dolor dolorum odio, saepe quibusdam iusto possimus nesciunt dolores assumenda quae totam, doloremque odit. Itaque cum animi, labore debitis deserunt iusto!
                   </p>

@@ -1,20 +1,11 @@
 <script setup>
-import { reactive } from 'vue'
-// async function extranalData(){
-//   try{
-//     const res =await fetch("https://jsonplaceholder.typicode.com/posts")
-//     const textData = await res.json();
-//     return textData;
-//   } catch (error)
-//   {
-//     const errorMessage =  `Detected error \"${error.name}\"" and Causes of Error: \"${error.message}\"`
-//     return errorMessage
-//   }
-// }
-// const posts = await extranalData()
-// const accordionData = reactive(posts)
-// console.log(accordionData)
-
+import { ref, watchEffect } from 'vue'
+const commits = ref(null)
+watchEffect(async () => {
+  const API_URL = `https://jsonplaceholder.typicode.com/posts`
+  commits.value = await (await fetch(API_URL)).json()
+})
+const accordionIndex = ref(0)
 </script>
 
 <template>
@@ -32,16 +23,16 @@ import { reactive } from 'vue'
               <div class="h-1 w-full mx-auto border-b my-5"></div>
     
               <!-- What is term -->
-              <div class="transition hover:bg-indigo-50">
+              <div class="transition hover:bg-indigo-50" v-for="({body, title}, index) in commits" :key="index">
                 <!-- header -->
-                <div class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
-                  <i class="fas fa-plus" ></i>
-                  <h3 >What is term?</h3>
+                <div @click="accordionIndex=index" class="accordion-header cursor-pointer transition flex space-x-5 px-5 items-center h-16">
+                  <i class="fas" :class="(index == accordionIndex) ? 'fa-minus': 'fa-plus'" ></i>
+                  <h3 :class="(index == accordionIndex) ? 'text-orange-700': ''" >{{ title.trim() }}</h3>
                 </div>
                 <!-- Content -->
-                <div class="px-5 pt-0 text-left pb-5">
+                <div class="px-5 pt-0 text-left pb-5" v-show="index == accordionIndex">
                   <p class="leading-6 font-light pl-9 ">
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi dolor dolorum odio, saepe quibusdam iusto possimus nesciunt dolores assumenda quae totam, doloremque odit. Itaque cum animi, labore debitis deserunt iusto!
+                    {{ body.trim() }}
                   </p>
                 </div>
               </div>
