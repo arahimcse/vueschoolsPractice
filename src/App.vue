@@ -3,6 +3,7 @@ import { ref, reactive } from 'vue';
 import ListRendering from './components/listRendering.vue';
 import GetDataFromParentComponent from './components/getDataFromParentComponent.vue';
 import PassingPross from './components/PassingPross.vue';
+import PassingEmits from './components/PassingEmits.vue';
 const msg = ref("Hello World")
 
 /**
@@ -20,6 +21,14 @@ const passingProps = reactive([
   {id:2, name:"safuwan ahammed"},
   {id:3, name:"rajuwan ahammed"}
 ])
+
+//Passing Emits from parent component to child component
+const passingEmits = reactive([
+  {id:1, name:"Item 1"},
+  {id:2, name:"Item 2"},
+  {id:3, name:"Item 3"}
+])
+const textFontSize = ref(1)
 </script>
 
 <template>
@@ -54,6 +63,15 @@ const passingProps = reactive([
    </PassingPross>
  </section>
 
+<div :style="{fontSize:textFontSize + 'em'}">
+  <PassingEmits 
+  v-for="(passingEmit, index) in passingEmits"
+  :key="index"
+  :name="passingEmit.name"
+  @enlarge-text ="textFontSize += 0.1"
+  >
+  </PassingEmits>
+</div>
 </template>
 
 
