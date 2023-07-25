@@ -30,6 +30,23 @@ const passingEmits = reactive([
   {id:3, name:"Item 3"}
 ])
 const textFontSize = ref(1)
+
+
+/**
+ * Case Insensitivity​
+HTML tags and attribute names are case-insensitive, so browsers will interpret any uppercase characters as lowercase. That means when you’re using in-DOM templates, PascalCase component names and camelCased prop names or v-on event names all need to use their kebab-cased (hyphen-delimited) equivalents:
+ */
+// camelCase in JavaScript
+// const BlogPost = {
+//   props: ['postTitle'],
+//   emits: ['updatePost'],
+//   template: `
+//     <h3>{{ postTitle }}</h3>
+//   `
+// }
+// <!-- kebab-case in HTML -->
+// <blog-post post-title="hello!" @update-post="onUpdatePost"></blog-post>
+
 </script>
 
 <template>
@@ -80,7 +97,7 @@ const textFontSize = ref(1)
 <SlotCom>
   Something Wrong here
   </SlotCom>
-  
+
 </template>
 
 
