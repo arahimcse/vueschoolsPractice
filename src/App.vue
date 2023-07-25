@@ -4,6 +4,7 @@ import ListRendering from './components/listRendering.vue';
 import GetDataFromParentComponent from './components/getDataFromParentComponent.vue';
 import PassingPross from './components/PassingPross.vue';
 import PassingEmits from './components/PassingEmits.vue';
+import SlotCom from './components/SlotCom.vue';
 const msg = ref("Hello World")
 
 /**
@@ -53,25 +54,33 @@ const textFontSize = ref(1)
 </GetDataFromParentComponent>
  </ol>
 
+ <!-- defineProps -->
  <section>
    <PassingPross
    v-for="(passingProp, index) in passingProps"
    :key="index"
    :name="passingProp.name"
-   >
+   />
 
-   </PassingPross>
+  
  </section>
 
+ <!-- define Emeits  -->
 <div :style="{fontSize:textFontSize + 'em'}">
   <PassingEmits 
   v-for="(passingEmit, index) in passingEmits"
   :key="index"
   :name="passingEmit.name"
   @enlarge-text ="textFontSize += 0.1"
-  >
-  </PassingEmits>
+  />
+
 </div>
+
+<!-- define slot -->
+<SlotCom>
+  Something Wrong here
+  </SlotCom>
+  
 </template>
 
 

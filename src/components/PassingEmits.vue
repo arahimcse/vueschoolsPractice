@@ -5,7 +5,7 @@ defineEmits(["enlarge-text"])
 
 <template>
  <h3>{{ name }}</h3>
- <button @click="$emit('enlarge-text')">Enlarge Text</button>
+ <button @click.prevent="$emit('enlarge-text')">Enlarge Text</button>
 </template>
 
 <style scoped>
