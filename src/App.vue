@@ -2,6 +2,7 @@
 import { ref, reactive } from 'vue';
 import ListRendering from './components/listRendering.vue';
 import GetDataFromParentComponent from './components/getDataFromParentComponent.vue';
+import PassingPross from './components/PassingPross.vue';
 const msg = ref("Hello World")
 
 /**
@@ -13,6 +14,12 @@ const todoLists = reactive([
   {id:2,title:"Apple"}
 ])
 
+//PassingProps from parent component to child component
+const passingProps = reactive([
+  {id:1, name:"abdur rahim"},
+  {id:2, name:"safuwan ahammed"},
+  {id:3, name:"rajuwan ahammed"}
+])
 </script>
 
 <template>
@@ -36,6 +43,16 @@ const todoLists = reactive([
   :key="item.id">
 </GetDataFromParentComponent>
  </ol>
+
+ <section>
+   <PassingPross
+   v-for="(passingProp, index) in passingProps"
+   :key="index"
+   :name="passingProp.name"
+   >
+
+   </PassingPross>
+ </section>
 
 </template>
 
