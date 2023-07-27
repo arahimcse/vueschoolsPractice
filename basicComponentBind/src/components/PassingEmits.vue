@@ -1,4 +1,7 @@
 <script setup>
+/**
+ * link@ https://vuejs.org/guide/essentials/component-basics.html#listening-to-events
+ */
 defineProps(["name"])
 defineEmits(["enlarge-text"])
 </script>

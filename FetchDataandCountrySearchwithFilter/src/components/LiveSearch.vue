@@ -1,7 +1,6 @@
 <script setup>
 import { ref, reactive, watchEffect } from 'vue';
 const countries = ref(null)
-const countryLists = reactive([])
 watchEffect(async () => {
   const url = "https://restcountries.com/v3.1/all?fields=name,capital"
   countries.value = await (await fetch(url)).json()

@@ -1,4 +1,8 @@
 <script setup>
+/**
+ * link@ https://vuejs.org/guide/essentials/component-basics.html#passing-props
+ * 
+ */
 defineProps(['name'])
 </script>
 
