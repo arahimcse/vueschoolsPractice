@@ -96,7 +96,7 @@ HTML tags and attribute names are case-insensitive, so browsers will interpret a
 
   <!-- define Emeits  -->
   <div :style="{ fontSize: textFontSize + 'em' }">
-    <PassingEmits v-for="(passingEmit, index) in passingEmits" :key="index" :name="passingEmit.name"
+    <PassingEmits v-for="(passingEmit, index) in passingEmits" :key="index" :name="tr54dex.name"
       @enlarge-text="textFontSize += 0.1" />
 
   </div>

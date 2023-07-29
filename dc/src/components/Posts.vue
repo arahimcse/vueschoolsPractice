@@ -1,5 +1,5 @@
 <template>
   <div class="tab">
-    Home component
+    Posts component
   </div>
 </template>

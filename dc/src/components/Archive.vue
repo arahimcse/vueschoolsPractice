@@ -1,5 +1,5 @@
 <template>
   <div class="tab">
-      <p>Archive Content</p>
+    Archive component
   </div>
 </template>
