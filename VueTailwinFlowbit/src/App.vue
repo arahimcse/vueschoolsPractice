@@ -11,8 +11,22 @@ onMounted(() => {
 
 <template>
 
-<h1 class=" text-3xl text-center">Hello World!</h1>
+<div class=" flex w-full sm:bg-green-900 md:bg-indigo-900 lg:bg-slate-400 xl:bg-red-400 2xl:bg-purple-300  bg-yellow-200">
+    <h1 class=" text-3xl">Hello World!</h1>
+</div>
 
+<!-- This will center text on mobile, and left align it on screens 640px and wider -->
+<div class="text-center sm:text-left">this is text</div>
+
+<!-- Single breakpoint between sm[640px] to md[767px] -->
+<div class="sm:max-md:bg-red-900 bg-indigo-500">
+  targeting a single breakpoint
+</div>
+
+<!-- Arbitary values set in the breakpoint -->
+<div class="min-[320px]:text-center max-[600px]:bg-sky-300">
+  Change the layout by arbitary values
+</div>
 <!-- flowbite modal box -->
 <div>
         <div class="flex justify-center p-4">
@@ -50,9 +64,6 @@ onMounted(() => {
             </div>
         </div>
     </div>
-
-
-
 
 <!-- drawer init and show -->
 <div class="text-center">
