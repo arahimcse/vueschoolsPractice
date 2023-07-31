@@ -7,7 +7,12 @@ const checkboxex = ref([])
 const radioInput = ref()
 const selectInput = ref()
 const multipleSelect = ref([])
-
+const selected = ref('A')
+const options = ref([
+    {text:"one", value:"A"},
+    {text:"two", value:"B"},
+    {text:"three", value:"C"}
+])
 </script>
 
 <template>
@@ -128,5 +133,10 @@ const multipleSelect = ref([])
     </p>
 
 
-
+<!-- create selected area from data list -->
+<p>
+    <select v-model="selected">
+    <option v-for="option in options" :value="option.value" :key="option.text">{{ option.text }}</option>
+    </select>
+</p>
 </template>
