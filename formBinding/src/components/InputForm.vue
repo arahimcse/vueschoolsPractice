@@ -3,6 +3,7 @@ import { ref } from 'vue';
 const basicInput = ref('')
 const multiInput = ref('')
 const checkInput = ref(true)
+const checkboxex = ref([])
 </script>
 
 <template>
@@ -26,9 +27,52 @@ const checkInput = ref(true)
     <!-- input check box -->
     <div class="flex items-center">
         <input id="link-checkbox" type="checkbox" value=""
-            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600" v-model="checkInput">
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            v-model="checkInput">
         <label for="link-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">I agree with the <a
-            href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>.  {{ checkInput }}</label>
-</div>
+                href="#" class="text-blue-600 dark:text-blue-500 hover:underline">terms and conditions</a>. {{ checkInput
+                }}</label>
+    </div>
 
-</template>
+    <!-- Multiple checkboxes -->
+    <p>
+
+    <h3 class="mb-4 font-semibold text-gray-900 dark:text-white">Multiple Checkboxes  {{ checkboxex }}</h3>
+    <ul
+        class="w-48 text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+            <div class="flex items-center pl-3">
+                <input id="vue-checkbox" type="checkbox" value="Vue
+                    JS"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" v-model="checkboxex">
+                <label for="vue-checkbox" class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Vue
+                    JS</label>
+            </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+            <div class="flex items-center pl-3">
+                <input id="react-checkbox" type="checkbox" value="React"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" v-model="checkboxex">
+                <label for="react-checkbox"
+                    class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">React</label>
+            </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+            <div class="flex items-center pl-3">
+                <input id="angular-checkbox" type="checkbox" value="Angular"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" v-model="checkboxex">
+                <label for="angular-checkbox"
+                    class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Angular</label>
+            </div>
+        </li>
+        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
+            <div class="flex items-center pl-3">
+                <input id="laravel-checkbox" type="checkbox" value="Laravel"
+                    class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500" v-model="checkboxex">
+                <label for="laravel-checkbox"
+                class="w-full py-3 ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">Laravel</label>
+        </div>
+    </li>
+</ul>
+
+</p></template>
