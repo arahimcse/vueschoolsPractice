@@ -5,6 +5,8 @@ const multiInput = ref('')
 const checkInput = ref(true)
 const checkboxex = ref([])
 const radioInput = ref()
+const selectInput = ref()
+
 </script>
 
 <template>
@@ -95,12 +97,21 @@ const radioInput = ref()
     </div>
     <div class="flex items-center">
         <input checked id="default-radio-2" type="radio" value="two" name="default-radio"
-        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
-        v-model="radioInput">
-    <label for="default-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{ radioInput
+            class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 focus:ring-2 dark:bg-gray-700 dark:border-gray-600"
+            v-model="radioInput">
+        <label for="default-radio-2" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">{{ radioInput
         }}</label>
-</div>
+    </div>
+    </p>
 
-</p>
 
+    <p>
+        <h6>{{ selectInput }}</h6>
+        <select name="" id="" v-model="selectInput">
+            <option disabled value="">Please select one</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+        </select>
+    </p>
 </template>
