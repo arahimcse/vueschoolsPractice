@@ -6,6 +6,7 @@ const checkInput = ref(true)
 const checkboxex = ref([])
 const radioInput = ref()
 const selectInput = ref()
+const multipleSelect = ref([])
 
 </script>
 
@@ -104,14 +105,28 @@ const selectInput = ref()
     </div>
     </p>
 
-
+    <!-- Select Single Element -->
     <p>
-        <h6>{{ selectInput }}</h6>
-        <select name="" id="" v-model="selectInput">
-            <option disabled value="">Please select one</option>
-            <option value="A">A</option>
-            <option value="B">B</option>
-            <option value="C">C</option>
-        </select>
+    <h6>{{ selectInput }}</h6>
+    <select name="" id="" v-model="selectInput">
+        <option disabled value="">Please select one</option>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+    </select>
     </p>
+
+    <!-- Select Multiple element -->
+    <p>
+    <h6> {{ multipleSelect }}</h6>
+    <select name="" id="" v-model="multipleSelect" multiple>
+        <option value="A">A</option>
+        <option value="B">B</option>
+        <option value="C">C</option>
+        <option value="D">D</option>
+    </select>
+    </p>
+
+
+
 </template>
