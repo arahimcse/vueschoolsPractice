@@ -6,7 +6,7 @@ defineProps({
 
 <template>
   <div
-    class=" max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
+    class="mx-2 my-1 max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700"
   >
     <img class="rounded-t-lg" :src="product.thumbnail" :alt="product.title" />
 

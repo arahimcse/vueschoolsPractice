@@ -10,7 +10,7 @@ import MovieCard from "../components/MovieCard.vue";
 
 <template>
   <main>
-    <div class="w-4/5 mx-auto">
+    <div class="w-4/5 mx-auto flex flex-row flex-wrap">
       <MovieCard
         v-for="(product, index) in products"
         :key="index"
