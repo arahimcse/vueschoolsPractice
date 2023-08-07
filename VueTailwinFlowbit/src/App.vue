@@ -107,6 +107,10 @@ onMounted(() => {
    </p>
 </div>
 
+<div class="container mx-auto bg-sky-600 flex items-center">  
+    <h1>This is mx-auto class</h1>      
+</div>
+
 
 </template>
 

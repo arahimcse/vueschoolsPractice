@@ -1,11 +1,12 @@
 <script setup>
-import { RouterLink, RouterView} from 'vue-router'
+import { RouterLink, RouterView } from 'vue-router'
+
 </script>
 
 <template>
   <header>
     <div class="wrapper">
-     
+
 
       <nav class="text-center bg-indigo-700  inline-flex w-2/4">
         <RouterLink to="/">Home</RouterLink>
@@ -18,6 +19,4 @@ import { RouterLink, RouterView} from 'vue-router'
   <RouterView />
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>

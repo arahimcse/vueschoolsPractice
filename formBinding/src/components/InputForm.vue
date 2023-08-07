@@ -1,4 +1,10 @@
 <script setup>
+
+
+/**
+ * 
+ * One of the most important topic for data bind @https://vuejs.org/guide/components/v-model.html#component-v-model
+ */
 import { ref } from 'vue';
 const basicInput = ref('')
 const multiInput = ref('')
@@ -14,7 +20,7 @@ const options = ref([
     {text:"three", value:"C"}
 ])
 </script>
-
+let msg = ref('')
 <template>
     <!-- #text input -->
     <div>
@@ -139,4 +145,43 @@ const options = ref([
     <option v-for="option in options" :value="option.value" :key="option.text">{{ option.text }}</option>
     </select>
 </p>
+
+
+
+<!-- `picked` is a string "a" when checked -->
+<input type="radio" v-model="picked" value="a" />
+
+<!-- `toggle` is either true or false -->
+<input type="checkbox" v-model="toggle" />
+
+<!-- `selected` is a string "abc" when the first option is selected -->
+<select v-model="selected">
+  <option value="abc">ABC</option>
+</select>
+
+<input
+  type="checkbox"
+  v-model="toggle"
+  true-value="yes"
+  false-value="no" />
+
+
+  <input
+  type="checkbox"
+  v-model="toggle"
+  :true-value="dynamicTrueValue"
+  :false-value="dynamicFalseValue" />
+
+
+  <input type="radio" v-model="pick" :value="first" />
+<input type="radio" v-model="pick" :value="second" />
+
+<select v-model="selected">
+  <!-- inline object literal -->
+  <option :value="{ number: 123 }">123</option>
+</select>
+{{ msg }}
+<input v-model="msg" /> 
+
+
 </template>
