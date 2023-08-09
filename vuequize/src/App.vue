@@ -1,6 +1,7 @@
 <script setup>
 import { ref, reactive } from 'vue'
 import QuectionAnswer from './components/QuectionAnswer.vue'
+import HelloWorld from './components/HelloWorld.vue';
 const questionsCount = ref(0)
 const correctAnswerCount = ref(0)
 const questions = reactive([
@@ -104,5 +105,9 @@ const answerProcessed = (x) => {
 
     <QuectionAnswer :questionsCount="questionsCount" :questions="questions" @answer-processed="answerProcessed"
       :correctAnswer="correctAnswerCount" />
+
+
+
+      <HelloWorld/>
   </div>
 </template>
