@@ -28,6 +28,11 @@ const router = createRouter({
       path: '/jsondata/:id',
       name: 'jsondataDetails',
       component: () => import('../views/JsondataDetails.vue')
+    },
+    {
+      path: '/jsondata/:id/:user',
+      name: 'userDetails',
+      component: () => import('../views/UserDetails.vue')
     }
   ]
 })
